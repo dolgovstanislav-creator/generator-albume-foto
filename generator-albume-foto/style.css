@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap');
+
+:root { --ink:#25251f; --muted:#77786e; --cream:#f7f5ef; --green:#526b53; --line:#e6e3d9; }
+* { box-sizing:border-box; }
+body { margin:0; color:var(--ink); background:var(--cream); font-family:'DM Sans',sans-serif; }
+.hero { min-height:330px; padding:28px max(6vw,24px) 55px; color:#fff; background:linear-gradient(110deg,rgba(31,48,36,.88),rgba(48,65,48,.68)), url('https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=1800&q=85') center 48%/cover; }
+nav { display:flex; justify-content:space-between; align-items:center; max-width:1120px; margin:auto; }
+.logo { font-size:21px; font-weight:700; letter-spacing:-1px; }.logo span { color:#d6c9a7; }
+.nav-note { font-size:12px; color:#e5e6df; }
+.intro { max-width:1120px; margin:55px auto 0; }
+.eyebrow { font-size:10px; font-weight:700; letter-spacing:2px; color:#9b9c87; margin:0 0 12px; }
+.intro .eyebrow { color:#d5c9a8; }
+h1 { font:600 clamp(38px,6vw,62px)/1.05 'Playfair Display',serif; margin:0 0 15px; letter-spacing:-1px; }
+h1 em { color:#d8cba9; }
+.intro > p:last-child { color:#e1e3dc; font-size:14px; max-width:420px; line-height:1.7; }
+.container { max-width:1120px; margin:-25px auto 0; padding:0 24px 65px; position:relative; display:grid; grid-template-columns: .85fr 1.15fr; gap:22px; }
+.editor,.preview { background:#fff; border:1px solid var(--line); border-radius:12px; padding:28px; box-shadow:0 12px 35px #292d2110; }
+.section-heading,.preview-heading { display:flex; justify-content:space-between; align-items:center; margin-bottom:26px; }
+h2 { font:600 25px 'Playfair Display',serif; margin:0; }
+.step { font-size:10px; color:#a5a497; letter-spacing:1px; }
+label { display:block; font-size:12px; font-weight:600; margin-bottom:9px; }
+input[type=text] { width:100%; border:1px solid var(--line); border-radius:6px; padding:13px 14px; font:13px 'DM Sans'; outline:none; margin-bottom:22px; }
+input[type=text]:focus { border-color:var(--green); }
+.upload-area { border:1px dashed #c9cabb; border-radius:9px; background:#fafaf7; text-align:center; padding:26px 12px; }
+.upload-icon { margin:0 auto 12px; width:36px; height:36px; border-radius:50%; display:grid; place-items:center; background:#e9eee6; color:var(--green); font-size:24px; }
+h3 { margin:0 0 6px; font-size:14px; }.upload-area p { color:var(--muted); font-size:11px; margin:0 0 15px; }
+.primary-btn,.secondary-btn { border:0; border-radius:5px; padding:11px 17px; font:600 11px 'DM Sans'; cursor:pointer; }
+.primary-btn { background:var(--green); color:white; }.primary-btn:hover { background:#405641; }
+.upload-area small { display:block; color:#99998d; font-size:10px; margin-top:12px; }
+.actions { display:flex; align-items:center; justify-content:space-between; gap:10px; margin-top:17px; }
+.secondary-btn { background:#f0f0e9; color:#606356; }.secondary-btn:hover { background:#e7e8df; }
+#photoCount { font-size:10px; color:var(--muted); }
+.preview { min-height:400px; }.preview-heading { margin-bottom:20px; }
+.gallery { display:grid; grid-template-columns:repeat(3,1fr); gap:10px; }
+.photo-card { position:relative; aspect-ratio:1/1; overflow:hidden; border-radius:6px; background:#eee; }
+.photo-card img { width:100%; height:100%; object-fit:cover; display:block; }
+.remove-photo { position:absolute; top:7px; right:7px; border:0; border-radius:50%; width:25px; height:25px; background:#ffffffdf; color:#333; cursor:pointer; font-size:16px; }
+.empty-state { grid-column:1/-1; min-height:270px; display:flex; flex-direction:column; align-items:center; justify-content:center; color:var(--muted); text-align:center; }
+.empty-icon { font-size:38px; color:#c6c8b9; margin-bottom:8px; }.empty-state p { font-size:13px; margin:0 0 5px; }.empty-state small { font-size:11px; color:#a2a296; }
+footer { text-align:center; padding:0 20px 28px; color:#929286; font-size:11px; } footer span { color:#a66c5c; }
+@media(max-width:760px) { .container { grid-template-columns:1fr; margin-top:-18px; padding:0 15px 45px; }.hero { padding-left:22px; padding-right:22px; }.intro { margin-top:45px; }.editor,.preview { padding:22px; } }
+@media(max-width:420px) { .nav-note { display:none; }.gallery { grid-template-columns:repeat(2,1fr); }.actions { align-items:flex-start; flex-direction:column; } }

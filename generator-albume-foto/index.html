@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Album Foto</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <nav><span class="logo">Foto<span>Album</span></span><span class="nav-note">Amintiri frumoase, într-un singur loc</span></nav>
+    <div class="intro">
+      <p class="eyebrow">GENERATOR DE ALBUME FOTO</p>
+      <h1>Poveștile tale,<br><em>în fotografii.</em></h1>
+      <p>Adaugă fotografiile preferate și creează-ți propriul album în câteva secunde.</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="editor">
+      <div class="section-heading">
+        <div><p class="eyebrow">ALBUMUL TĂU</p><h2>Hai să-l creăm</h2></div>
+        <span class="step">01 / 02</span>
+      </div>
+
+      <label for="albumTitle">Numele albumului</label>
+      <input id="albumTitle" type="text" placeholder="Ex: Vacanța de vară" maxlength="60">
+
+      <div class="upload-area">
+        <input id="photoInput" type="file" accept="image/*" multiple hidden>
+        <div class="upload-icon">＋</div>
+        <h3>Adaugă fotografii</h3>
+        <p>Alege imagini de pe calculatorul tău</p>
+        <button class="primary-btn" id="chooseBtn" type="button">Alege fotografii</button>
+        <small>Poți selecta mai multe fotografii simultan.</small>
+      </div>
+      <div class="actions">
+        <button class="secondary-btn" id="clearBtn" type="button">Șterge fotografiile</button>
+        <span id="photoCount">Nicio fotografie adăugată</span>
+      </div>
+    </section>
+
+    <section class="preview">
+      <div class="preview-heading">
+        <div><p class="eyebrow">PREVIZUALIZARE</p><h2 id="previewTitle">Albumul meu</h2></div>
+        <span class="step">02 / 02</span>
+      </div>
+      <div id="gallery" class="gallery">
+        <div class="empty-state">
+          <div class="empty-icon">▧</div>
+          <p>Fotografiile tale vor apărea aici.</p>
+          <small>Începe prin a adăuga câteva imagini.</small>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>Creat cu drag pentru amintirile tale <span>♥</span></footer>
+  <script src="script.js"></script>
+</body>
+</html>
